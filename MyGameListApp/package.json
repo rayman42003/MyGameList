@@ -1,0 +1,15 @@
+{
+    "name": "my-game-list-app",
+    "version": "0.0.0",
+    "description": "MyGameListApp",
+    "main": "dist/app.js",
+    "author": {
+        "name": "Richmond"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.87"
+    },
+    "dependencies": {
+        "electron": "^1.7.10"
+    }
+}
