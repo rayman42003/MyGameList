@@ -33,10 +33,10 @@ namespace MyGameList.Controllers {
 
         // GET api/games/5
         [HttpGet("{id}", Name = "GetGame")]
-        public IActionResult GetGameById(int id) {
+        public IActionResult GetGameById(long id) {
             _logger.LogDebug($"[Games] Get {id} called");
 
-            Game game = _context.Games.FirstOrDefault(g => g.Id == id);
+            Game game = _context.Games.Find(id);
             if (game == null) {
                 return NotFound();
             }
@@ -61,7 +61,7 @@ namespace MyGameList.Controllers {
 
         // PUT api/games/5
         [HttpPut("{id}")]
-        public IActionResult UpdateGame(int id, [FromBody] Game game) {
+        public IActionResult UpdateGame(long id, [FromBody] Game game) {
             _logger.LogDebug($"[Games] Put id: {id} game: {PrettyPrint(game)} called");
 
             if (game == null) {
@@ -69,7 +69,7 @@ namespace MyGameList.Controllers {
             }
             game.Id = id;
 
-            Game gameToUpdate = _context.Games.FirstOrDefault(g => g.Id == id);
+            Game gameToUpdate = _context.Games.Find(id);
             if (gameToUpdate == null) {
                 return NotFound();
             }
@@ -85,10 +85,10 @@ namespace MyGameList.Controllers {
 
         // DELETE api/games/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteGame(int id) {
+        public IActionResult DeleteGame(long id) {
             _logger.LogDebug($"[Games] Delete {id} called");
 
-            Game gameToDelete = _context.Games.FirstOrDefault(game => game.Id == id);
+            Game gameToDelete = _context.Games.Find(id);
             if (gameToDelete == null) {
                 return NotFound();
             }
