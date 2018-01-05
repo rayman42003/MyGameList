@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MyGameList.Data;
 using MyGameList.Models;
 using Newtonsoft.Json;
 using System;
@@ -16,11 +17,6 @@ namespace MyGameList.Controllers {
         public GamesController(ILogger<GamesController> logger, GameContext context) {
             _logger = logger;
             _context = context;
-
-            if (_context.Games.Count() == 0) {
-                _context.Games.Add(new Game { Title = "Kingdom Hearts 3", Description = "GOTY" });
-                _context.SaveChanges();
-            }
         }
 
         // GET: api/games

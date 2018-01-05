@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyGameList.Models;
 
-namespace MyGameList.Models {
+namespace MyGameList.Data {
 
     public class GameContext : DbContext {
 
