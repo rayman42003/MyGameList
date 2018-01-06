@@ -2,10 +2,11 @@
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 
-namespace MyGameList.Controllers {
-
+namespace MyGameList.Controllers
+{
     [Route("api/[controller]")]
-    public class ValuesController : Controller {
+    public class ValuesController : Controller
+    {
         private ILogger<ValuesController> _logger;
 
         public ValuesController(ILogger<ValuesController> logger) {

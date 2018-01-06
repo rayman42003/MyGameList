@@ -7,10 +7,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyGameList.Controllers {
-
+namespace MyGameList.Controllers
+{
     [Route("api/[controller]")]
-    public class GamesController : Controller {
+    public class GamesController : Controller
+    {
         private readonly GameContext _context;
         private readonly ILogger<GamesController> _logger;
 

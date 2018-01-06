@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyGameList.Models;
 
-namespace MyGameList.Data {
-
-    public class GameContext : DbContext {
-
+namespace MyGameList.Data
+{
+    public class GameContext : DbContext
+    {
         public GameContext(DbContextOptions<GameContext> options)
             : base(options) {
         }

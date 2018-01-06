@@ -5,9 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyGameList.Data;
 
-namespace MyGameList {
-
-    public class Startup {
+namespace MyGameList
+{
+    public class Startup
+    {
         public IConfiguration Configuration { get; }
 
         private IHostingEnvironment _Environment { get; set; }

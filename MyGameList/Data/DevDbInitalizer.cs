@@ -1,10 +1,10 @@
 ﻿using MyGameList.Models;
 using System.Collections.Generic;
 
-namespace MyGameList.Data {
-
-    public static class DevDbInitalizer {
-
+namespace MyGameList.Data
+{
+    public static class DevDbInitalizer
+    {
         public static void Initalize(GameContext context) {
             context.Database.EnsureCreated();
 

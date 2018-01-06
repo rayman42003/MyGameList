@@ -6,10 +6,10 @@ using Serilog;
 using Serilog.Events;
 using System;
 
-namespace MyGameList {
-
-    public class Program {
-
+namespace MyGameList
+{
+    public class Program
+    {
         public static void Main(string[] args) {
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
